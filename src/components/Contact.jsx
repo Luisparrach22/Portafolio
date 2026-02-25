@@ -6,8 +6,8 @@ const contactInfo = [
   {
     icon: <FaEnvelope size={24} />,
     label: "Email",
-    value: "luisparrach22@gmail.com",
-    href: "mailto:luisparrach22@gmail.com"
+    value: "parra.chaconluis006@gmail.com",
+    href: "mailto:parra.chaconluis006@gmail.com"
   },
   {
     icon: <FaGithub size={24} />,
@@ -19,7 +19,7 @@ const contactInfo = [
     icon: <FaLinkedin size={24} />,
     label: "LinkedIn",
     value: "Luis Parra",
-    href: "https://linkedin.com"
+    href: "https://www.linkedin.com/in/luisparrach22/"
   },
   {
     icon: <HiLocationMarker size={24} />,
@@ -143,7 +143,7 @@ export default function Contact() {
           transition={{ delay: 0.5 }}
         >
           <motion.a
-            href="mailto:luisparrach22@gmail.com"
+            href="mailto:parra.chaconluis006@gmail.com"
             className="btn-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}

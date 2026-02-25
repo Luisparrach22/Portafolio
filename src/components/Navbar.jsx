@@ -18,6 +18,23 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
+  const handleNavClick = (e, href) => {
+    e.preventDefault()
+    setMenuOpen(false)
+    
+    setTimeout(() => {
+      const target = href === "body" ? document.body : document.querySelector(href)
+      if (target) {
+        const offset = 100 
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        })
+      }
+    }, 10)
+  }
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -32,6 +49,7 @@ export default function Navbar() {
       <div className="section-container flex justify-between items-center w-full max-w-[1400px] px-6 md:px-20 mx-auto">
         <motion.a
           href="#"
+          onClick={(e) => handleNavClick(e, "body")}
           whileHover={{ scale: 1.05 }}
           className="text-3xl font-black tracking-tighter"
           style={{ textDecoration: "none" }}
@@ -46,6 +64,7 @@ export default function Navbar() {
             <motion.a
               key={link.href}
               href={link.href}
+              onClick={(e) => handleNavClick(e, link.href)}
               initial={{ opacity: 0, y: -15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.1 + i * 0.1 }}
@@ -117,7 +136,7 @@ export default function Navbar() {
                 <motion.a
                   key={link.href}
                   href={link.href}
-                  onClick={() => setMenuOpen(false)}
+                  onClick={(e) => handleNavClick(e, link.href)}
                   initial={{ opacity: 0, y: 15 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 }}
@@ -133,6 +152,7 @@ export default function Navbar() {
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
+                whileTap={{ scale: 0.95 }}
                 className="btn-primary"
                 style={{
                   padding: "16px 45px",

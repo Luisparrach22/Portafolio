@@ -111,7 +111,7 @@ export default function About() {
                 visible: { transition: { staggerChildren: 0.05 } }
               }}
             >
-              {["React", "JavaScript", "Java", "Kotlin", "React Native", "MySQL", "Tailwind CSS", "Git", "Android", "iOS"].map((tech) => (
+              {["React", "JavaScript", "Python", "NodeJS", "Java", "Kotlin", "MySQL", "MongoDB", "Linux", "Git", "Android", "iOS"].map((tech) => (
                 <motion.span
                   key={tech}
                   className="tech-tag"
