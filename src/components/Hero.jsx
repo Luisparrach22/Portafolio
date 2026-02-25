@@ -79,25 +79,27 @@ export default function Hero() {
         className="mb-8"
       >
         <span
-          className="inline-block px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide"
+          className="inline-flex items-center justify-center px-6 py-2.5 rounded-full text-sm font-semibold tracking-wide"
           style={{
             background: "rgba(34,211,238,0.08)",
             color: "#22d3ee",
             border: "1px solid rgba(34,211,238,0.2)",
             minWidth: "320px",
-            minHeight: "42px"
+            minHeight: "42px",
+            textAlign: "center"
           }}
         >
-          {text}
+          <span>{text}</span>
           <span
             style={{
               display: "inline-block",
               width: "2px",
               height: "16px",
               background: "#22d3ee",
-              marginLeft: "2px",
+              marginLeft: "4px",
               verticalAlign: "middle",
-              animation: "pulse-glow 1s infinite"
+              animation: "pulse-glow 1s infinite",
+              flexShrink: 0
             }}
           />
         </span>

@@ -80,7 +80,7 @@ export default function Contact() {
         </motion.p>
 
         <motion.div
-          className="grid sm:grid-cols-2 gap-6 max-w-3xl mx-auto"
+          className="grid sm:grid-cols-2 gap-6 w-full max-w-3xl mx-auto"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
