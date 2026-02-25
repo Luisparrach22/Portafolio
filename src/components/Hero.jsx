@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { FaGithub, FaLinkedin } from "react-icons/fa"
+import { FaGithub, FaLinkedin, FaInstagram } from "react-icons/fa"
 import { HiArrowDown } from "react-icons/hi"
 import { useState, useEffect } from "react"
 
@@ -177,11 +177,13 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.9 }}
-        className="flex gap-6 mb-20"
+        className="flex gap-8"
+        style={{ marginTop: "40px", marginBottom: "60px" }}
       >
         {[
           { icon: <FaGithub size={26} />, href: "https://github.com/Luisparrach22", label: "GitHub" },
-          { icon: <FaLinkedin size={26} />, href: "https://linkedin.com", label: "LinkedIn" }
+          { icon: <FaLinkedin size={26} />, href: "https://linkedin.com", label: "LinkedIn" },
+          { icon: <FaInstagram size={26} />, href: "https://instagram.com", label: "Instagram" }
         ].map((social) => (
           <motion.a
             key={social.label}

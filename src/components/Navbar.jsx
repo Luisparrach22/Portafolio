@@ -29,7 +29,7 @@ export default function Navbar() {
           : "top-6 w-[95%] max-w-[1400px] glass py-7 rounded-3xl border border-white/5"
       }`}
     >
-      <div className="section-container flex justify-between items-center w-full max-w-[1400px] px-12 md:px-20 mx-auto">
+      <div className="section-container flex justify-between items-center w-full max-w-[1400px] px-6 md:px-20 mx-auto">
         <motion.a
           href="#"
           whileHover={{ scale: 1.05 }}
@@ -80,28 +80,26 @@ export default function Navbar() {
           Descargar CV
         </motion.a>
 
-        {/* Mobile Toggle */}
-        <button
+        {/* Mobile Toggle - Circular Minimalist Design */}
+        <motion.button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden flex flex-col gap-1.5 p-2"
-          style={{ background: "none", border: "none", cursor: "pointer" }}
+          whileTap={{ scale: 0.9 }}
+          className="md:hidden flex items-center justify-center w-12 h-12 rounded-full border border-cyan-500/20 bg-cyan-500/5 backdrop-blur-md relative"
+          style={{ cursor: "pointer", border: "1px solid rgba(34,211,238,0.2)" }}
         >
-          <motion.span
-            animate={menuOpen ? { rotate: 45, y: 7 } : { rotate: 0, y: 0 }}
-            className="block w-6 h-0.5 bg-slate-300"
-            transition={{ duration: 0.3 }}
-          />
-          <motion.span
-            animate={menuOpen ? { opacity: 0 } : { opacity: 1 }}
-            className="block w-6 h-0.5 bg-slate-300"
-            transition={{ duration: 0.2 }}
-          />
-          <motion.span
-            animate={menuOpen ? { rotate: -45, y: -7 } : { rotate: 0, y: 0 }}
-            className="block w-6 h-0.5 bg-slate-300"
-            transition={{ duration: 0.3 }}
-          />
-        </button>
+          <div className="flex flex-col gap-1.5 items-end">
+            <motion.span
+              animate={menuOpen ? { rotate: 45, y: 4, width: "22px" } : { rotate: 0, y: 0, width: "22px" }}
+              className="block h-0.5 bg-cyan-400 rounded-full"
+              transition={{ duration: 0.3 }}
+            />
+            <motion.span
+              animate={menuOpen ? { rotate: -45, y: -4, width: "22px" } : { rotate: 0, y: 0, width: "14px" }}
+              className="block h-0.5 bg-cyan-400 rounded-full"
+              transition={{ duration: 0.3 }}
+            />
+          </div>
+        </motion.button>
       </div>
 
       {/* Mobile Menu */}
@@ -114,16 +112,16 @@ export default function Navbar() {
             transition={{ duration: 0.3 }}
             className="md:hidden glass border-t border-white/5"
           >
-            <div className="section-container py-12 flex flex-col gap-8 items-center">
+            <div className="w-full flex flex-col items-center justify-center py-12 gap-8 px-4">
               {navLinks.map((link, i) => (
                 <motion.a
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08 }}
-                  className="text-slate-400 hover:text-cyan-400 transition-colors py-2 text-xl font-bold uppercase tracking-widest"
+                  className="text-slate-400 hover:text-cyan-400 transition-colors py-2 text-xl font-bold uppercase tracking-[0.2em] text-center"
                   style={{ textDecoration: "none" }}
                 >
                   {link.label}
@@ -132,10 +130,18 @@ export default function Navbar() {
               <motion.a
                 href="/cv.pdf"
                 download
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 15 }}
+                animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
-                className="btn-primary w-full max-w-sm text-center mt-4"
+                className="btn-primary"
+                style={{
+                  padding: "16px 45px",
+                  fontSize: "12px",
+                  minWidth: "220px",
+                  marginTop: "1.5rem",
+                  marginLeft: "auto",
+                  marginRight: "auto"
+                }}
               >
                 Descargar CV
               </motion.a>
