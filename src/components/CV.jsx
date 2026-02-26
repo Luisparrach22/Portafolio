@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import cvFile from "../assets/CV Luis Parra.pdf.pdf"
 
 export default function CV() {
   return (
@@ -8,8 +9,8 @@ export default function CV() {
       <motion.a
         whileHover={{ scale: 1.15 }}
         whileTap={{ scale: 0.9 }}
-        href="/cv.pdf"
-        download
+        href={cvFile}
+        download="CV Luis Parra.pdf"
         className="bg-gradient-to-r from-cyan-400 to-blue-500 px-12 py-5 rounded-2xl text-black font-bold"
       >
         Descargar CV

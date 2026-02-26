@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import cvFile from "../assets/CV Luis Parra.pdf.pdf"
 
 const navLinks = [
   { label: "Sobre mí", href: "#about" },
@@ -78,8 +79,8 @@ export default function Navbar() {
         </div>
 
         <motion.a
-          href="/cv.pdf"
-          download
+          href={cvFile}
+          download="CV Luis Parra.pdf"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           whileHover={{ scale: 1.06 }}
@@ -147,8 +148,8 @@ export default function Navbar() {
                 </motion.a>
               ))}
               <motion.a
-                href="/cv.pdf"
-                download
+                href={cvFile}
+                download="CV Luis Parra.pdf"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
