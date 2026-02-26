@@ -184,7 +184,7 @@ export default function Hero() {
         {[
           { icon: <FaGithub size={26} />, href: "https://github.com/Luisparrach22", label: "GitHub" },
           { icon: <FaLinkedin size={26} />, href: "https://linkedin.com", label: "LinkedIn" },
-          { icon: <FaInstagram size={26} />, href: "https://instagram.com", label: "Instagram" }
+          { icon: <FaInstagram size={26} />, href: "https://www.instagram.com/ale_pxrrx_", label: "Instagram" }
         ].map((social) => (
           <motion.a
             key={social.label}

@@ -27,7 +27,7 @@ export default function Skills() {
       style={{
         position: "relative",
         zIndex: 1,
-        padding: "140px 0",
+        padding: "10px 0",
         background: "linear-gradient(180deg, rgba(15,23,42,0.4) 0%, rgba(2,6,23,1) 100%)"
       }}
     >
