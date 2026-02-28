@@ -60,7 +60,8 @@ export default function Projects() {
               variants={cardVariants}
               whileHover={{ y: -10 }}
               className="glass-card overflow-hidden group"
-              style={{ cursor: "default" }}
+              style={{ cursor: "pointer" }}
+              onClick={() => project.link && project.link !== "#" && window.open(project.link, "_blank")}
             >
               {/* Project image/preview */}
               <div
@@ -94,6 +95,7 @@ export default function Projects() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.15, y: -3 }}
                       whileTap={{ scale: 0.95 }}
                       className="p-4 rounded-xl transition-colors"
@@ -112,6 +114,7 @@ export default function Projects() {
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
+                      onClick={(e) => e.stopPropagation()}
                       whileHover={{ scale: 1.15, y: -3 }}
                       whileTap={{ scale: 0.95 }}
                       className="p-4 rounded-xl transition-colors"
