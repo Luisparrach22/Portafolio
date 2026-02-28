@@ -78,17 +78,15 @@ export default function Navbar() {
           ))}
         </div>
 
-        <motion.a
-          href={cvFile}
-          download="CV Luis Parra.pdf"
+        <motion.button
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          whileHover={{ scale: 1.06 }}
-          whileTap={{ scale: 0.95 }}
-          className="hidden md:inline-flex items-center justify-center rounded-full font-black uppercase transition-all shadow-[0_0_25px_rgba(34,211,238,0.25)] hover:shadow-[0_0_40px_rgba(34,211,238,0.45)] whitespace-nowrap"
+          whileHover={{ scale: 1.05 }}
+          disabled
+          className="hidden md:inline-flex items-center justify-center rounded-full font-black uppercase transition-all shadow-none opacity-50 cursor-not-allowed whitespace-nowrap"
           style={{
-            background: "linear-gradient(135deg, #22d3ee, #818cf8)",
-            color: "#020617",
+            background: "linear-gradient(135deg, #4b5563, #374151)",
+            color: "#d1d5db",
             textDecoration: "none",
             fontSize: "12px",
             letterSpacing: "0.2em",
@@ -97,8 +95,8 @@ export default function Navbar() {
             lineHeight: "1"
           }}
         >
-          Descargar CV
-        </motion.a>
+          CV No Disponible
+        </motion.button>
 
         {/* Mobile Toggle - Circular Minimalist Design */}
         <motion.button
@@ -147,25 +145,29 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
-              <motion.a
-                href={cvFile}
-                download="CV Luis Parra.pdf"
+              <motion.button
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
-                whileTap={{ scale: 0.95 }}
-                className="btn-primary"
+                disabled
+                className="opacity-50 cursor-not-allowed"
                 style={{
+                  background: "#374151",
+                  color: "#d1d5db",
                   padding: "16px 45px",
                   fontSize: "12px",
                   minWidth: "220px",
                   marginTop: "1.5rem",
                   marginLeft: "auto",
-                  marginRight: "auto"
+                  marginRight: "auto",
+                  borderRadius: "9999px",
+                  fontWeight: "900",
+                  textTransform: "uppercase",
+                  letterSpacing: "0.2em"
                 }}
               >
-                Descargar CV
-              </motion.a>
+                CV No Disponible
+              </motion.button>
             </div>
           </motion.div>
         )}
