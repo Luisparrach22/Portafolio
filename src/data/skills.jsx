@@ -7,7 +7,8 @@ import {
   FaAndroid,
   FaApple,
   FaNodeJs,
-  FaLinux
+  FaLinux,
+  FaSwift
 } from "react-icons/fa"
 
 import {
@@ -29,10 +30,9 @@ export const skills = [
   { name: "Linux", icon: <FaLinux size={45} color="#FCC624" /> },
   { name: "Python", icon: <SiPython size={45} color="#3776AB" /> },
   { name: "Tailwind", icon: <SiTailwindcss size={45} color="#38BDF8" /> },
-  { name: "Android", icon: <FaAndroid size={45} color="#3DDC84" /> },
-  { name: "iOS", icon: <FaApple size={45} color="#A2AAAD" /> },
+  { name: "Swift", icon: <FaSwift size={45} color="#F15138" /> },
   { name: "Kotlin", icon: <SiKotlin size={45} color="#7F52FF" /> },
-  { name: "HTML", icon: <FaHtml5 size={45} color="#E34F26" /> },
+  { name: "JavaScript", icon: <SiJavascript size={45} color="#F7DF1E" /> },
   { name: "CSS", icon: <FaCss3Alt size={45} color="#1572B6" /> },
-  { name: "JavaScript", icon: <SiJavascript size={45} color="#F7DF1E" /> }
+  { name: "HTML", icon: <FaHtml5 size={45} color="#E34F26" /> },
 ]

@@ -76,13 +76,13 @@ export default function Projects() {
                   whileHover={{ scale: 1.05 }}
                   transition={{ duration: 0.4 }}
                 >
-                  <motion.span
-                    className="text-6xl"
-                    whileHover={{ scale: 1.2, rotate: [0, -5, 5, 0] }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    {project.emoji}
-                  </motion.span>
+                  <motion.img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover"
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.4 }}
+                  />
                 </motion.div>
 
                 {/* Overlay on hover */}
