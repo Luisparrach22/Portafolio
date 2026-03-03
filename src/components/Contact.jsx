@@ -143,7 +143,9 @@ export default function Contact() {
           transition={{ delay: 0.5 }}
         >
           <motion.a
-            href="mailto:parra.chaconluis006@gmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=parra.chaconluis006@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-primary"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.97 }}
