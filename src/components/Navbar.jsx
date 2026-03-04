@@ -78,25 +78,27 @@ export default function Navbar() {
           ))}
         </div>
 
-        <motion.button
+        <motion.a
+          href={cvFile}
+          download="CV Luis Parra.pdf"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           whileHover={{ scale: 1.05 }}
-          disabled
-          className="hidden md:inline-flex items-center justify-center rounded-full font-black uppercase transition-all shadow-none opacity-50 cursor-not-allowed whitespace-nowrap"
+          className="hidden md:inline-flex items-center justify-center rounded-full font-black uppercase transition-all shadow-none whitespace-nowrap"
           style={{
-            background: "linear-gradient(135deg, #4b5563, #374151)",
-            color: "#d1d5db",
+            background: "linear-gradient(145deg, #22d3ee 0%, #818cf8 50%, #c084fc 100%)",
+            color: "#ffffff",
             textDecoration: "none",
             fontSize: "12px",
             letterSpacing: "0.2em",
             padding: "15px 45px",
             minWidth: "210px",
-            lineHeight: "1"
+            lineHeight: "1",
+            cursor: "pointer",
           }}
         >
-          CV No Disponible
-        </motion.button>
+          Descargar CV
+        </motion.a>
 
         {/* Mobile Toggle - Circular Minimalist Design */}
         <motion.button
@@ -145,15 +147,16 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
-              <motion.button
+              <motion.a
+                href={cvFile}
+                download="CV Luis Parra.pdf"
                 initial={{ opacity: 0, y: 15 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.35 }}
-                disabled
-                className="opacity-50 cursor-not-allowed"
+                className="inline-flex items-center justify-center"
                 style={{
-                  background: "#374151",
-                  color: "#d1d5db",
+                  background: "linear-gradient(145deg, #22d3ee 0%, #818cf8 50%, #c084fc 100%)",
+                  color: "#ffffff",
                   padding: "16px 45px",
                   fontSize: "12px",
                   minWidth: "220px",
@@ -163,11 +166,13 @@ export default function Navbar() {
                   borderRadius: "9999px",
                   fontWeight: "900",
                   textTransform: "uppercase",
-                  letterSpacing: "0.2em"
+                  letterSpacing: "0.2em",
+                  cursor: "pointer",
+                  textDecoration: "none"
                 }}
               >
-                CV No Disponible
-              </motion.button>
+                Descargar CV
+              </motion.a>
             </div>
           </motion.div>
         )}

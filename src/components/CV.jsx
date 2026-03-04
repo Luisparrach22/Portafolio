@@ -6,13 +6,15 @@ export default function CV() {
     <section id="cv" className="text-center py-36">
       <h2 className="text-4xl font-bold mb-10">Curriculum</h2>
 
-      <motion.button
-        className="bg-gray-600 px-12 py-5 rounded-2xl text-white font-bold cursor-not-allowed opacity-70"
+      <motion.a
+        href={cvFile}
+        download="CV Luis Parra.pdf"
+        className="inline-flex items-center justify-center bg-cyan-500 px-12 py-5 rounded-2xl text-white font-bold transition-all hover:bg-cyan-400"
         whileHover={{ scale: 1.05 }}
-        disabled
+        style={{ textDecoration: "none" }}
       >
-        Descargar CV (Mantenimiento)
-      </motion.button>
+        Descargar CV
+      </motion.a>
     </section>
   )
 }
