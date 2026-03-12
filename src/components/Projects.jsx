@@ -132,19 +132,29 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-7">
-                <h3 className="text-xl font-bold text-white mb-3">{project.title}</h3>
+              <div style={{ padding: "40px" }}>
+                {project.status && (
+                  <div className="flex justify-center" style={{ marginBottom: "35px" }}>
+                    <span className={`status-badge ${project.status === "Completado" ? "completed" : "in-progress"}`}>
+                      <span className={`status-dot ${project.status !== "Completado" ? "pulsing" : ""}`}></span>
+                      {project.status}
+                    </span>
+                  </div>
+                )}
+                <h3 className="text-2xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors">
+                  {project.title}
+                </h3>
                 <p
-                  className="mb-5 text-sm"
-                  style={{ color: "#94a3b8", lineHeight: 1.7 }}
+                  className="mb-8 text-sm"
+                  style={{ color: "#94a3b8", lineHeight: 1.8, fontSize: "1rem" }}
                 >
                   {project.description}
                 </p>
 
                 {/* Tech tags */}
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-3">
                   {project.tech.map((t) => (
-                    <span key={t} className="tech-tag">
+                    <span key={t} className="tech-tag" style={{ padding: "8px 16px" }}>
                       {t}
                     </span>
                   ))}
