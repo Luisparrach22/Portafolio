@@ -78,16 +78,15 @@ export default function Navbar() {
           ))}
         </div>
 
-        <motion.div
+        <motion.a
           href={cvFile}
           download="CV Luis Parra.pdf"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
-          //whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05 }}
           className="hidden md:inline-flex items-center justify-center rounded-full font-black uppercase transition-all shadow-none whitespace-nowrap"
           style={{
-            //background: "linear-gradient(145deg, #22d3ee 0%, #818cf8 50%, #c084fc 100%)",
-            background: "#bdbbbbff",
+            background: "linear-gradient(145deg, #22d3ee 0%, #818cf8 50%, #c084fc 100%)",
             color: "#ffffff",
             textDecoration: "none",
             fontSize: "12px",
@@ -95,14 +94,11 @@ export default function Navbar() {
             padding: "15px 45px",
             minWidth: "210px",
             lineHeight: "1",
-            cursor: "not-allowed",
-            opacity: "0.7",
-            //cursor: "pointer",
+            cursor: "pointer",
           }}
         >
-          CV no disponible
-          {/*Descargar CV*/}
-        </motion.div>
+          Descargar CV
+        </motion.a>
 
         {/* Mobile Toggle - Circular Minimalist Design */}
         <motion.button
@@ -151,7 +147,7 @@ export default function Navbar() {
                   {link.label}
                 </motion.a>
               ))}
-              <motion.div
+              <motion.a
                 href={cvFile}
                 download="CV Luis Parra.pdf"
                 initial={{ opacity: 0, y: 15 }}
@@ -159,8 +155,7 @@ export default function Navbar() {
                 transition={{ delay: 0.35 }}
                 className="inline-flex items-center justify-center"
                 style={{
-                  //background: "linear-gradient(145deg, #22d3ee 0%, #818cf8 50%, #c084fc 100%)",
-                  background: "#bdbbbbff",
+                  background: "linear-gradient(145deg, #22d3ee 0%, #818cf8 50%, #c084fc 100%)",
                   color: "#ffffff",
                   padding: "16px 45px",
                   fontSize: "12px",
@@ -172,15 +167,12 @@ export default function Navbar() {
                   fontWeight: "900",
                   textTransform: "uppercase",
                   letterSpacing: "0.2em",
-                  cursor: "not-allowed",
-                  opacity: "0.7",
-                  //cursor: "pointer",
+                  cursor: "pointer",
                   textDecoration: "none"
                 }}
               >
-                CV no disponible
-                {/*Descargar CV*/}
-              </motion.div>
+                Descargar CV
+              </motion.a>
             </div>
           </motion.div>
         )}
